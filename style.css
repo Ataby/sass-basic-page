@@ -6,14 +6,111 @@
 
 body {
   font-size: 1.2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 body header {
   background-color: lightskyblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
-body main aside {
+body header ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+}
+body header li {
+  display: inline-block;
+  padding: 0.7rem;
+  text-shadow: 0px 0px 5px white;
+}
+body header li:hover {
+  color: black;
+  text-decoration: underline;
+  background-color: rgb(255, 255, 29);
+  border-radius: 15px;
+}
+body header a {
+  text-decoration: none;
+}
+
+.banner {
+  background-color: rgb(255, 255, 29);
+  display: flex;
+  justify-content: space-between;
+  text-shadow: 0px 0px 5px white;
+  align-items: center;
+  padding-left: 1.5rem;
+  line-height: 2.5rem;
+}
+.banner aside {
+  color: black;
+  align-content: center;
+}
+.banner aside button {
+  padding: 0.6rem;
+  background-color: lightskyblue;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  border: none;
+  cursor: pointer;
+}
+.banner img {
+  width: 35%;
+  max-width: 400px;
+  min-width: 240px;
+}
+
+.cards {
+  display: flex;
+}
+.cards .card1, .cards .card3, .cards .card4 {
+  background-color: orange;
+  color: black;
+  height: 240px;
+  border-radius: 5px;
+  border: 1px solid orangered;
+  width: 25%;
+  margin: 1rem;
+}
+.cards .card2 {
+  background-color: green;
   color: white;
-  background-color: pink;
-  text-shadow: 0px 0px 5px black;
+  height: 240px;
+  border-radius: 5px;
+  border: 1px solid orangered;
+  width: 25%;
+  margin: 1rem;
+}
+.cards .card3, .cards .card4 {
+  background-color: skyblue;
+}
+.cards .card4 {
+  background-color: hotpink;
+}
+
+.articles {
+  display: flex;
+  gap: 2rem;
+}
+.articles .art1 {
+  height: 200px;
+  background-color: purple;
+  color: white;
+  width: 50%;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+.articles .art2 {
+  height: 200px;
+  background-color: blue;
+  color: white;
+  width: 50%;
+  border: 1px solid black;
+  border-radius: 8px;
 }
 
 /*# sourceMappingURL=style.css.map */

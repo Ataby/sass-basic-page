@@ -10,22 +10,120 @@ $fontColor:white;
 $fontFamily:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 $navbgColor:lightskyblue;
 $bgColor:pink;
-$bannerbg:hotpink;
-$shadow: 0px 0px 5px black;
+$bannerbg:rgb(255, 255, 29);
+$shadow: 0px 0px 5px white;
 
 
 
 body{
     font-size: $fontSize;
+    font-family: $fontFamily;
     header{
         background-color:$navbgColor ;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+        ul{
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+        }
+
+        li{
+            display: inline-block;
+            padding: .7rem;
+            text-shadow: $shadow;
+            &:hover{
+                color: black;
+                text-decoration: underline;
+                background-color: $bannerbg;
+                border-radius: 15px;
+            }
+        }
+        
+            a{
+                text-decoration: none;
+            }
+    }
+}
+
+.banner {
+    background-color: $bannerbg;
+    display: flex;
+    justify-content: space-between;
+    text-shadow: $shadow;
+    align-items: center;
+    padding-left: 1.5rem;
+    line-height: 2.5rem;
+
+    aside{
+        color: black;
+        align-content: center;
+
+        button{ padding: .6rem;
+                background-color: lightskyblue;
+                border-radius: 10px;
+                font-size: $fontSize;
+                margin-top: 2rem;
+                border: none;
+                cursor: pointer;
+                }
+    }
+
+    img{
+        width: 35%;
+        max-width: 400px;
+        min-width: 240px;
+    }
+}
+
+@mixin mybox($bcc , $cc , $height){
+    background-color: $bcc;
+    color: $cc;
+    height: $height;
+    border-radius: 5px;
+    border: 1px solid orangered;
+    width: 25%;
+    margin: 1rem;
+}
+
+//EXTEND İLE TÜM ÖZELLİKLER AYNEN KOPYALANIR, ÜSTÜNE EKLEME YAPILABİLİR.
+// MİXİN İLE FONKSİYON OLUŞTURULUR, PARAMETRELER ÜZERİNDEN İŞLEM YAPILIR. 
+
+.cards{
+    display: flex;
+    .card1{ @include mybox(orange, black ,240px )}
+    
+    .card2{ @include mybox(green,white ,240px )}
+    
+    .card3{ @extend .card1;
+            background-color: skyblue;
+            // @include mybox(skyblue, black , 240px )
     }
     
-    main{
-        aside{
-            color: $fontColor;
-            background-color: $bgColor;
-            text-shadow: $shadow;
-        }
+    .card4{ @extend .card3;
+        background-color: hotpink;
+        // @include mybox(hotpink, black ,240px )
     }
+   
+}
+
+@mixin artic($height , $bcc, $cc){
+    height: $height;
+    background-color: $bcc;
+    color: $cc;
+    // margin: 1rem;
+    width: 50%;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+.articles{
+    display: flex;
+    gap: 2rem;
+    .art1{@include artic(200px,purple , white )}
+
+    .art2{ @include artic(200px, blue,white )}
 }
