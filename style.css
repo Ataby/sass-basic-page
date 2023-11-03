@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 1.2rem;
+}
+body header {
+  background-color: lightskyblue;
+}
+body main aside {
+  color: white;
+  background-color: pink;
+  text-shadow: 0px 0px 5px black;
+}
+
+/*# sourceMappingURL=style.css.map */
