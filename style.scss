@@ -127,3 +127,37 @@ body{
 
     .art2{ @include artic(200px, blue,white )}
 }
+
+
+footer {
+    .icons{
+        display: flex;
+        height: 10rem;
+
+        // FOR DÖNGÜSÜ //
+        @for $i from 1 through 5 {
+            .icons#{$i}{
+            width: 20%;
+            background-color: lighten( crimson, $i * 5);
+            font-size: $i * 1.1rem;
+            color: darken( lightgray, $i * 5);
+            text-shadow: 0px 0px 5px white;
+            }
+        }        
+    }    
+}
+
+// IF ELSE YAPISI 
+$degisken : 2;
+#p1{
+@if $degisken==1
+    {
+        background-color: skyblue;
+    } 
+    @else if $degisken==2
+    {
+        background-color: green;
+    }
+    @else { background-color: lightcoral;}
+
+}
