@@ -1,0 +1,12 @@
+@import "../abstract/mixins";
+
+.articles{
+    display: flex;
+    gap: 2rem;
+    .art1{@include artic(200px,purple , white )}
+
+    .art2{ @include artic(200px, blue,white )}
+}
+
+//EXTEND İLE TÜM ÖZELLİKLER AYNEN KOPYALANIR, ÜSTÜNE EKLEME YAPILABİLİR.
+// MİXİN İLE FONKSİYON OLUŞTURULUR, PARAMETRELER ÜZERİNDEN İŞLEM YAPILIR. 

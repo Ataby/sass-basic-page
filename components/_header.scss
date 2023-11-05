@@ -1,0 +1,31 @@
+ @import "../abstract/variables";
+
+.banner {
+    background-color: $bannerbg;
+    display: flex;
+    justify-content: space-between;
+    text-shadow: $shadow;
+    align-items: center;
+    padding-left: 1.5rem;
+    line-height: 2.5rem;
+
+    aside{
+        color: black;
+        align-content: center;
+
+        button{ padding: .6rem;
+                background-color: lightskyblue;
+                border-radius: 10px;
+                font-size: $font_size;
+                margin-top: 2rem;
+                border: none;
+                cursor: pointer;
+                }
+    }
+
+    img{
+        width: 35%;
+        max-width: 400px;
+        min-width: 240px;
+    }
+}

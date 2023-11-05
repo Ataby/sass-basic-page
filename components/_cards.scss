@@ -1,0 +1,21 @@
+ 
+@import "../abstract/mixins";
+
+.cards{
+    
+    display: flex;
+    .card1{ @include mybox(orange, black ,240px )}
+    
+    .card2{ @include mybox(green,white ,240px )}
+    
+    .card3{@include mybox(skyblue, black , 240px ) 
+            //@extend .card1 ;
+            //background-color: skyblue;
+    }
+    
+    .card4{ //@extend .card3;
+        //background-color: hotpink;
+         @include mybox(hotpink, black ,240px )
+    }
+   
+}

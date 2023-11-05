@@ -1,0 +1,41 @@
+ @import "../abstract/variables";
+
+ // @use "/abstract/variables" as v ;
+// body{
+//     font-size: v.$font_size;
+//     font-family: v.$fontFamily;
+
+body{
+    font-size: $font_size;
+    font-family: $fontFamily;
+    header{
+        background-color:$navbgColor ;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+        ul{
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+        }
+
+        li{
+            display: inline-block;
+            padding: .7rem;
+            text-shadow: $shadow;
+            &:hover{
+                color: black;
+                text-decoration: underline;
+                background-color: $bannerbg;
+                border-radius: 15px;
+            }
+        }
+        
+            a{
+                text-decoration: none;
+            }
+    }
+}

@@ -1,0 +1,33 @@
+@import "../abstract/variables";
+footer {
+    .icons{
+        display: flex;
+        height: 10rem;
+
+        // FOR DÖNGÜSÜ //
+        @for $i from 1 through 5 {
+            .icons#{$i}{
+            width: 20%;
+            background-color: lighten( crimson, $i * 5);
+            font-size: $i * 1.1rem;
+            color: darken( lightgray, $i * 5);
+            text-shadow: $shadow;
+            }
+        }        
+    }    
+}
+
+// IF ELSE YAPISI 
+$degisken : 2;
+footer #p1{
+@if $degisken==1
+    {
+        background-color: skyblue;
+    } 
+    @else if $degisken==2
+    {
+        background-color: green;
+    }
+    @else { background-color: lightcoral;}
+
+}
