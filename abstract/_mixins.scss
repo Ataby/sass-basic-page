@@ -1,0 +1,23 @@
+ 
+
+@mixin mybox($bcc , $cc , $height){
+    background-color: $bcc;
+    color: $cc;
+    height: $height;
+    border-radius: 5px;
+    border: 1px solid orangered;
+    width: 25%;
+    margin: 1rem;
+}
+
+@mixin artic($height , $bcc, $cc){
+    height: $height;
+    background-color: $bcc;
+    color: $cc;
+    // margin: 1rem;
+    width: 50%;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+//EXTEND İLE TÜM ÖZELLİKLER AYNEN KOPYALANIR, ÜSTÜNE EKLEME YAPILABİLİR.
+// MİXİN İLE FONKSİYON OLUŞTURULUR, PARAMETRELER ÜZERİNDEN İŞLEM YAPILIR. 
